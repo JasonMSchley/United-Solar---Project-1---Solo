@@ -10,21 +10,32 @@ United Solar, as mentioned earlier, is a solar panel production and installation
  
 ## Categories
 
-### Configuration and Setup
-2	United Solar does business in the United States, Korea, and Japan. They need to allow their employees to see prices in the dollar, won and yen currencies.
-2	United Solar's fiscal year begins in February, but is otherwise the same as a normal fiscal year. They would like this reflected in Salesforce.
-2	United Solar wants the New User email link to expire in 1 day instead of 7 days.
-2	United Solar wants to have objects worked on by engineers to be in their own place and objects worked on by the support staff in another dedicated place so that these roles can easily access objects they work on.
-10	At the start, United Solar wants 5 users to be able to access Salesforce:
-Jon is an Engineer who needs to see certifications he holds, work orders he is assigned, and reimbursement requests he has made. He also needs to see all businesses and households.
-Lisa is the Engineering Lead and needs to see and edit all certifications, solar products, and work orders. She also needs to be able to see all businesses, reimbursement requests, leads and opportunities.
-Damian is in HR and needs to see all records except certifications.
-Alexandra is a Support Rep and needs to see and edit support tickets, orders, payment receipts, business and household records, and contact records. She also needs to see all solar products.
-Cory is in Finance and needs to see solar products, work orders, business and household records, contact records, reimbursement requests and payment receipts. He only needs to see these records and should only be able to edit the "Status" field of payment receipts, which should be one of 3 values: New, Approved, Rejected
-Don't forget, you are a user as well! You are the Salesforce Admin!
-2	Lisa wants to be able to easily add new certifications to an engineer while they're looking at that engineers information.
-2	While still setting everything up, we don't want users to be able to log in. However, you still need to verify security for each user. Make sure that you can log in as that user, but they cannot log in themselves and are not given the chance to login.
-1	HR should not be able to log in outside of work hours (9:00am - 5:00pm).
-1	All login attempts outside of the company building (IP Address 198:172:1:38) should have to complete some multifactor authentication step.
-2	United Solar wants to make sure the sensitive data accessible by HR representatives remains secure. In order to accomplish this, they request that HR passwords should expire every 30 days. They also want all users to have the last 4 passwords remembered when setting a new password.
-2	United Solar wants to have 15 users with the Chatter External license for their partners. However, they do not want them to be able to log in yet, so make sure they don't get sent a password. You may assign them any name you want, since it will be changed later when United Solar is ready.
+### Configuration and Setup (20 points)
+#### 2	points
+    United Solar does business in the United States, Korea, and Japan. They need to allow their employees to see prices in the dollar, won and yen currencies.
+#### 2	points
+    United Solar's fiscal year begins in February, but is otherwise the same as a normal fiscal year. They would like this reflected in Salesforce.
+#### 2	points
+    United Solar wants the New User email link to expire in 1 day instead of 7 days.
+#### 2	points
+    United Solar wants to have objects worked on by engineers to be in their own place and objects worked on by the support staff in another dedicated place so that these roles can easily access objects they work on.
+#### 10	points
+    At the start, United Solar wants 5 users to be able to access Salesforce:
+    Jon is an Engineer who needs to see certifications he holds, work orders he is assigned, and reimbursement requests he has made. He also needs to see all businesses and households.
+    Lisa is the Engineering Lead and needs to see and edit all certifications, solar products, and work orders. She also needs to be able to see all businesses, reimbursement requests, leads and opportunities.
+    Damian is in HR and needs to see all records except certifications.
+    Alexandra is a Support Rep and needs to see and edit support tickets, orders, payment receipts, business and household records, and contact records. She also needs to see all solar products.
+    Cory is in Finance and needs to see solar products, work orders, business and household records, contact records, reimbursement requests and payment receipts. He only needs to see these records and should only be able to edit the "Status" field of payment receipts, which should be one of 3 values: New, Approved, Rejected
+    Don't forget, you are a user as well! You are the Salesforce Admin!
+#### 2	points
+    Lisa wants to be able to easily add new certifications to an engineer while they're looking at that engineers information.
+#### 2	points
+    While still setting everything up, we don't want users to be able to log in. However, you still need to verify security for each user. Make sure that you can log in as that user, but they cannot log in themselves and are not given the chance to login.
+#### 1	points
+    HR should not be able to log in outside of work hours (9:00am - 5:00pm).
+#### 1  points
+	All login attempts outside of the company building (IP Address 198:172:1:38) should have to complete some multifactor authentication step.
+#### 2	points
+    United Solar wants to make sure the sensitive data accessible by HR representatives remains secure. In order to accomplish this, they request that HR passwords should expire every 30 days. They also want all users to have the last 4 passwords remembered when setting a new password.
+#### 2	points
+    United Solar wants to have 15 users with the Chatter External license for their partners. However, they do not want them to be able to log in yet, so make sure they don't get sent a password. You may assign them any name you want, since it will be changed later when United Solar is ready.

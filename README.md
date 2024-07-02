@@ -15,8 +15,12 @@ PACKAGE ALL OF THIS INTO AN UNLOCKED PACKAGE; UPLOAD IT TO A REPO AS WELL!
 ## Configuration and Setup (Max Points: 20)
 ### 2	points
 United Solar does business in the United States, Korea, and Japan. They need to allow their employees to see prices in the dollar, won and yen currencies.
+- [Currency.settings](/force-app/main/default/settings/Currency.settings-meta.xml)
+- [Currency_Type.csv](/force-app/main/records/Currency.settings-meta.xml)
+
 ### 2	points
 United Solar's fiscal year begins in February, but is otherwise the same as a normal fiscal year. They would like this reflected in Salesforce.
+
 ### 2  points
 United Solar wants the New User email link to expire in 1 day instead of 7 days.
 ### 2  points

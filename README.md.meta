@@ -1,0 +1,4 @@
+sf force:org:create -s -f config/project-scratch-def.json -a UnitedSolar1Solo
+sfdx force:user:password:generate -u UnitedSolar1Solo
+sfdx force:user:display -u UnitedSolar1Solo
+

@@ -21,7 +21,11 @@
     <members>*</members>
     <name>CustomObject</name>
   </types>
-    <types>
+  <types>
+    <members>*</members>
+    <name>CustomField</name>
+  </types>
+  <types>
     <members>Currency</members>
     <members>Org</members>
     <name>Settings</name>

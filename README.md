@@ -11,16 +11,24 @@ Analysis: Before starting work on the project, the team must perform analysis on
 
 ## -
 United Solar, as mentioned earlier, is a solar panel production and installation company. Their solar panel products are sold to both businesses and households and the sales representatives need to often get in contact with these places. Sometimes, our sales reps get some lead on a potential sale and they like to have that distinguished from the businesses that United Solar has already sold to. Businesses are often repeat customers, and our sales reps also like to have those upcoming deals tracked. Businesses can often pay the entire installation amount up front, but often times households need to pay in installations using payment receipts. In case of issues with the products, United Solar also would like a ticketing system set up. The installation of certain solar panels requires a certification, or multiple. United Solar wants to keep track of the certifications a solar panel needs for installation and which engineers hold that certification. When an installation is requested, it's tracked through a work order. Finally, internal employees, especially engineers, need to be able to make reimbursment requests for expenses when they're on installation.
-### Product - Solar Panel / Installation
+### Standard Objects Modified
+User 
+    Junction object to Certification
+Work Order
+    Junction object to Certification
+Account
+    Account Type (Business / Household)   
+### Custom Objects
+Certification
+    Junction object to User
+    Junction object to Work Order
+Reimbursement Request    
+
 ### Order 
-### Account - Business / Household
 ### Contact
 ### Lead - Future Deals
 ### Payments - Upfront / installments
 ### Ticketing System - Case
-### Certification - Attached to Engineer / Installation Work Order / Product 
-### Purchase Order (Work Order)
-### Reimbursements
 
 PACKAGE ALL OF THIS INTO AN UNLOCKED PACKAGE; UPLOAD IT TO A REPO AS WELL!
 
@@ -42,10 +50,10 @@ United Solar's fiscal year begins in February, but is otherwise the same as a no
 United Solar wants the New User email link to expire in 1 day instead of 7 days.
 - Setup, Session Settings
 
-### 2  points
+### 2  points ?
 United Solar wants to have objects worked on by engineers to be in their own place and objects worked on by the support staff in another dedicated place so that these roles can easily access objects they work on.
 
-### 10 points
+### 10 points ?
 At the start, United Solar wants 5 users to be able to access Salesforce:
 Jon is an Engineer who needs to see certifications he holds, work orders he is assigned, and reimbursement requests he has made. He also needs to see all businesses and households.
 Lisa is the Engineering Lead and needs to see and edit all certifications, solar products, and work orders. She also needs to be able to see all businesses, reimbursement requests, leads and opportunities.
@@ -54,34 +62,41 @@ Alexandra is a Support Rep and needs to see and edit support tickets, orders, pa
 Cory is in Finance and needs to see solar products, work orders, business and household records, contact records, reimbursement requests and payment receipts. He only needs to see these records and should only be able to edit the "Status" field of payment receipts, which should be one of 3 values: New, Approved, Rejected
 Don't forget, you are a user as well! You are the Salesforce Admin!
 
-### 2	points
+
+### 2	points 
 Lisa wants to be able to easily add new certifications to an engineer while they're looking at that engineers information.
+Related tab
 
 ### 2	points
 While still setting everything up, we don't want users to be able to log in. However, you still need to verify security for each user. Make sure that you can log in as that user, but they cannot log in themselves and are not given the chance to login.
+Login Access Policies
 
 ### 1	points
 HR should not be able to log in outside of work hours (9:00am - 5:00pm).
+Profile for HR with specific Login Hours
 
 ### 1  points
-All login attempts outside of the company building (IP Address 198:172:1:38) should have to complete some multifactor authentication step.
+All login attempts outside of the company building (IP Address 198.172.1.38) should have to complete some multifactor authentication step.
+Network access - define range
+Identify Verify - enable MFA
 
 ### 2	points
 United Solar wants to make sure the sensitive data accessible by HR representatives remains secure. In order to accomplish this, they request that HR passwords should expire every 30 days. They also want all users to have the last 4 passwords remembered when setting a new password.
+Password Polcies
 
 ### 2  points
 United Solar wants to have 15 users with the Chatter External license for their partners. However, they do not want them to be able to log in yet, so make sure they don't get sent a password. You may assign them any name you want, since it will be changed later when United Solar is ready.
-
+users - 15 chatters
 
 ## Object Manager and Lightning App Builder (Max Points: 20)
 ###	12	points	
 Implement the ERD. Add in custom fields you think would be useful to track on each object.
 
-###	2	points	
+###	2	points	x
 United Solar sells to both businesses and households. Most of the values are the same between the two, but they would like a way of distinguishing if a business is a household or corporation. Fields not relevant to households should not be displayed for households and fields not relevant for businesses should not be displayed for businesses.
 
 ###	2	points	
-Work Orders should have the field tracking the next action date hidden when they are completed.
+Work Orders should have the field tracking the next action date hidden when they are completed. ?
 
 ###	4	points	
 Orders should have a field that displays how much money is owed that subtracts the amount paid from the payment receipts related to the order from the amount of the order. This should only include payment receipts that have a status of approved.
@@ -175,3 +190,12 @@ Engineers should be automatically given read access to the solar products they a
 When the Next Payment Due Date is in two days, a contact from the business that made the order should be emailed a reminder
 ###	3	points	
 An engineer should be emailed when they are assigned to a work order
+
+# Continue building on P1 
+include an employee portal made with visualforce. The portal should allows technicians to:
+ 
+## manage tickets related to their work orders
+## submit reimbursement requests 
+## accept work orders/view assigned work orders 
+## submit paid time off requests
+## view their work schedule - this should accurately reflect holidays/paid time off and any scheduled work orders 

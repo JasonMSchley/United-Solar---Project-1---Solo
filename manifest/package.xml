@@ -25,6 +25,10 @@
     <members>*</members>
     <name>CustomField</name>
   </types>
+    <types>
+    <members>Account.Person_Account</members>
+    <name>RecordType</name>
+  </types>
   <types>
     <members>Currency</members>
     <members>Org</members>
